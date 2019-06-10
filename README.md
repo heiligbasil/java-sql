@@ -17,7 +17,7 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 ### **Clicking the `Restore Database` button in the page will repopulate the database with the original data and discard all changes you have made**.
 
 ### find all customers that live in London. Returns 6 records.
-> SELECT * FROM Customers WHERE city = 'London'  
+> _SELECT * FROM Customers WHERE city = 'London'_  
 CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country  
 4	Around the Horn	Thomas Hardy	120 Hanover Sq.	London	WA1 1DP	UK  
 11	B's Beverages	Victoria Ashworth	Fauntleroy Circus	London	EC2 5NT	UK  
@@ -27,7 +27,11 @@ CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country
 72	Seven Seas Imports	Hari Kumar	90 Wadhurst Rd.	London	OX15 4NB	UK  
 
 ### find all customers with postal code 1010. Returns 3 customers.
-> This can be done with SELECT and WHERE clauses
+> _SELECT * FROM Customers WHERE PostalCode = '1010'_  
+CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country  
+12	Cactus Comidas para llevar	Patricio Simpson	Cerrito 333	Buenos Aires	1010	Argentina  
+54	Océano Atlántico Ltda.	Yvonne Moncada	Ing. Gustavo Moncada 8585 Piso 20-A	Buenos Aires	1010	Argentina  
+64	Rancho grande	Sergio Gutiérrez	Av. del Libertador 900	Buenos Aires	1010	Argentina  
 
 ### find the phone number for the supplier with the id 11. Should be (010) 9984510.
 > This can be done with SELECT and WHERE clauses
