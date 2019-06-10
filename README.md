@@ -39,7 +39,23 @@ Phone
 (010) 9984510  
 
 ### list orders descending by the order date. The order with date 1997-02-12 should be at the top.
-> This can be done with SELECT, WHERE, and ORDER BY clauses
+> _SELECT * FROM Orders ORDER BY OrderDate DESC_  
+OrderID	CustomerID	EmployeeID	OrderDate	ShipperID  
+10443	66	8	1997-02-12	1  
+10442	20	3	1997-02-11	2  
+10440	71	4	1997-02-10	2  
+10441	55	3	1997-02-10	2  
+10439	51	6	1997-02-07	3  
+10438	79	3	1997-02-06	2  
+10436	7	3	1997-02-05	2  
+...  
+10254	14	5	1996-07-11	2  
+10253	34	3	1996-07-10	2  
+10252	76	4	1996-07-09	2  
+10250	34	4	1996-07-08	2  
+10251	84	3	1996-07-08	1  
+10249	81	6	1996-07-05	1  
+10248	90	5	1996-07-04	3  
 
 ### find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name. Returns 11 records.
 > This can be done with SELECT and WHERE clauses
