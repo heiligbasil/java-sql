@@ -159,15 +159,8 @@ CustomerID	CustomerName	OrderCount	City	Country	OrderDate
 ## Create Database and Table
 
 ### Keep track of the code you write and paste at the end of this document
-
 - use pgAdmin to create a database, naming it `budget`.
-- add an `accounts` table with the following _schema_:
-
-  - `id`, numeric value with no decimal places that should autoincrement.
-  - `name`, string, add whatever is necessary to make searching by name faster.
-  - `budget` numeric value.
-
-- constraints
-  - the `id` should be the primary key for the table.
-  - account `name` should be unique.
-  - account `budget` is required.
+- add an `accounts` table with a _schema_ and constraints:  
+> _CREATE DATABASE budget_  
+_CREATE TABLE accounts (id INT PRIMARY KEY, name TEXT UNIQUE, budget INT NOT NULL)_  
+_SELECT * FROM accounts_  
