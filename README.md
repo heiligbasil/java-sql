@@ -34,7 +34,9 @@ CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country
 64	Rancho grande	Sergio Gutiérrez	Av. del Libertador 900	Buenos Aires	1010	Argentina  
 
 ### find the phone number for the supplier with the id 11. Should be (010) 9984510.
-> This can be done with SELECT and WHERE clauses
+> _SELECT Phone FROM [Suppliers] WHERE SupplierID = '11'_  
+Phone  
+(010) 9984510  
 
 ### list orders descending by the order date. The order with date 1997-02-12 should be at the top.
 > This can be done with SELECT, WHERE, and ORDER BY clauses
