@@ -129,7 +129,23 @@ CustomerID	CustomerName	OrderCount	City	Country	OrderDate
 91	Wolski	1	Walla	Poland	1996-12-05  
 
 ### list orders grouped by customer's city showing number of orders per city. Returns 58 Records with _Aachen_ showing 2 orders and _Albuquerque_ showing 7 orders.
-> This is very similar to the previous two queries, however, it focuses on the City rather than the CustomerName
+> _SELECT Customers.CustomerID, CustomerName, COUNT(OrderID) AS OrderCount, City, Country, OrderDate FROM Customers JOIN ORDERS ON Customers.CustomerID = Orders.CustomerID GROUP BY Customers.City ORDER BY City_  
+CustomerID	CustomerName	OrderCount	City	Country	OrderDate  
+17	Drachenblut Delikatessend	2	Aachen	Germany	1996-11-26  
+65	Rattlesnake Canyon Grocery	7	Albuquerque	USA	1996-07-22  
+55	Old World Delicatessen	4	Anchorage	USA	1996-07-19  
+...  
+89	White Clover Markets	2	Seattle	USA	1996-07-31  
+30	Godos Cocina Típica	1	Sevilla	Spain	1996-09-11  
+70	Santé Gourmet	1	Stavern	Norway	1996-12-18  
+7	Blondel père et fils	4	Strasbourg	France	1996-07-25  
+86	Die Wandernde Kuh	4	Stuttgart	Germany	1996-09-09  
+81	Tradição Hipermercados	8	São Paulo	Brazil	1996-07-05  
+27	Franchi S.p.A.	1	Torino	Italy	1997-01-22  
+41	La maison d'Asie	5	Toulouse	France	1996-11-11  
+10	Bottom-Dollar Marketse	4	Tsawassen	Canada	1996-12-20  
+91	Wolski	1	Walla	Poland	1996-12-05  
+83	Vaffeljernet	2	Århus	Denmark	1996-11-28  
 
 ## Stretch Goals
 
