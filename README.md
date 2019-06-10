@@ -115,7 +115,18 @@ CustomerID	CustomerName	OrderCount	City	Country	OrderDate
 91	Wolski	1	Walla	Poland	1996-12-05  
 
 ### list customers names and the number of orders per customer. Sort the list by number of orders in descending order. _Ernst Handel_ should be at the top with 10 orders followed by _QUICK-Stop_, _Rattlesnake Canyon Grocery_ and _Wartian Herkku_ with 7 orders each.
-> This can be done by adding an ORDER BY clause to the previous answer
+> _SELECT Customers.CustomerID, CustomerName, COUNT(OrderID) AS OrderCount, City, Country, OrderDate FROM Customers JOIN ORDERS ON Customers.CustomerID = Orders.CustomerID GROUP BY Customers.CustomerID ORDER BY OrderCount DESC_  
+CustomerID	CustomerName	OrderCount	City	Country	OrderDate  
+20	Ernst Handel	10	Graz	Austria	1996-07-17  
+63	QUICK-Stop	7	Cunewalde	Germany	1996-08-05  
+65	Rattlesnake Canyon Grocery	7	Albuquerque	USA	1996-07-22  
+87	Wartian Herkku	7	Oulu	Finland	1996-07-26  
+37	Hungry Owl All-Night Grocers	6	Cork	Ireland	1996-09-05  
+75	Split Rail Beer & Ale	6	Lander	USA	1996-08-01  
+...  
+79	Toms Spezialitäten	1	Münster	Germany	1997-02-06  
+90	Wilman Kala	1	Helsinki	Finland	1996-07-04  
+91	Wolski	1	Walla	Poland	1996-12-05  
 
 ### list orders grouped by customer's city showing number of orders per city. Returns 58 Records with _Aachen_ showing 2 orders and _Albuquerque_ showing 7 orders.
 > This is very similar to the previous two queries, however, it focuses on the City rather than the CustomerName
