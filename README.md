@@ -91,9 +91,28 @@ CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country
 92	The Shire	Bilbo Baggins	1 Hobbit-Hole	Bag End	11122	Middle Earth  
 
 ### list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
-> This can be done with SELECT, COUNT, JOIN and GROUP BY clauses. Your count should focus on a field in the Orders table, not the Customer table
-
-> There is more information about the COUNT clause on [W3 Schools](https://www.w3schools.com/sql/sql_count_avg_sum.asp)
+> _SELECT Customers.CustomerID, CustomerName, count(OrderID) AS OrderCount, City, Country, OrderDate FROM Customers JOIN ORDERS ON Customers.CustomerID = Orders.CustomerID GROUP BY Customers.CustomerID_  
+CustomerID	CustomerName	OrderCount	City	Country	OrderDate  
+2	Ana Trujillo Emparedados y helados	1	México D.F.	Mexico	1996-09-18  
+3	Antonio Moreno Taquería	1	México D.F.	Mexico	1996-11-27  
+4	Around the Horn	2	London	UK	1996-11-15  
+5	Berglunds snabbköp	3	Luleå	Sweden	1996-08-12  
+7	Blondel père et fils	4	Strasbourg	France	1996-07-25  
+8	Bólido Comidas preparadas	1	Madrid	Spain	1996-10-10  
+9	Bon app'	3	Marseille	France	1996-10-16  
+10	Bottom-Dollar Marketse	4	Tsawassen	Canada	1996-12-20  
+11	B's Beverages	1	London	UK	1996-08-26  
+13	Centro comercial Moctezuma	1	México D.F.	Mexico	1996-07-18  
+14	Chop-suey Chinese	2	Bern	Switzerland	1996-07-11  
+15	Comércio Mineiro	1	São Paulo	Brazil	1996-08-27  
+16	Consolidated Holdings	1	London	UK	1997-02-04  
+17	Drachenblut Delikatessend	2	Aachen	Germany	1996-11-26  
+...  
+65	Rattlesnake Canyon Grocery	7	Albuquerque	USA	1996-07-22  
+...  
+89	White Clover Markets	2	Seattle	USA	1996-07-31  
+90	Wilman Kala	1	Helsinki	Finland	1996-07-04  
+91	Wolski	1	Walla	Poland	1996-12-05  
 
 ### list customers names and the number of orders per customer. Sort the list by number of orders in descending order. _Ernst Handel_ should be at the top with 10 orders followed by _QUICK-Stop_, _Rattlesnake Canyon Grocery_ and _Wartian Herkku_ with 7 orders each.
 > This can be done by adding an ORDER BY clause to the previous answer
